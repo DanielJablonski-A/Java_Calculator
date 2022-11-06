@@ -623,7 +623,7 @@ public class Calculator {
             }
             // znak dzielenia
             if (to_do.get(i).equals("/")){
-                if ((i == 0 || i == to_do.size()-1) || (!isNumeric(to_do.get(i+1)) && !to_do.get(i+1).equals("(") && !to_do.get(i+1).equals("√"))){
+                if ((i == 0 || i == to_do.size()-1) || (!isNumeric(to_do.get(i+1)) && !to_do.get(i+1).equals("(") && !to_do.get(i+1).equals("√")) || to_do.get(i+1).equals("0")){
                     set_main_display_color("red");
                     show_error_on_main_display("Zla formula przy znaku '/'.");
                 }
